@@ -18,8 +18,8 @@ type MyIO interface {
 	MyWriter
 	// 下面的这个方法声明的添加将会让编译器报错，
 	// 因为它与那些内嵌接口中的 Close 方法不完全重叠。
-	Close() 
+	// Close()
 	// 下面这个内嵌接口是有效的，
 	// 因为其中的 Close 方法与其他的完全重叠。
-	//io.Closer 
+	io.Closer
 }
